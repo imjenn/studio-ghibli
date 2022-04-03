@@ -1,0 +1,49 @@
+.film-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 70px 50px;
+}
+
+.search-bar { 
+    position: relative;
+    left: 11rem;
+    top: 50px;
+}
+
+.search-bar img {
+    margin: 10px;
+    position: absolute;
+    z-index: 1;
+    width: 25px;
+}
+
+.search-bar input {
+    /* margin: 50px 20%; */
+    padding: 5px 5px 5px 40px;
+    width: 50px;
+    height: 30px;
+    border: 1px solid lightgrey;
+    transition-duration: 0.4s;
+    display: inline-flex;
+    background-color: #f2f3f7;
+    font-size: 14pt;
+}
+
+.search-bar input::placeholder {
+    opacity: 0;
+    transition: 0.25s ease-in-out;
+}
+
+.search-bar input:focus {
+    transition: all 0.2s ease-in-out;
+    width: 270px;
+    transition: 0.25s;
+    outline: none;
+    border: 1px solid #DDDDDD;
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+}
+
+.search-bar input:focus::placeholder {
+    opacity: 1;
+}

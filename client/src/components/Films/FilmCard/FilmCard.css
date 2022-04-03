@@ -1,0 +1,11 @@
+.props-card {
+    padding: 50px;
+}
+
+.props-card img {
+    height: 600px;
+}
+
+.props-card h2, .props-card h3, {
+    text-align: center;
+}
