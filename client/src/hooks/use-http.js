@@ -11,7 +11,7 @@ const useHttp = (collection) => {
             .then(value => new Promise(resolve => {
                 setTimeout(() => {
                     resolve(value);
-                }, 500)
+                }, 3000)
             }))
             .then(res => {
                 console.log(res.data);

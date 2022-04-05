@@ -47,3 +47,56 @@
 .search-bar input:focus::placeholder {
     opacity: 1;
 }
+
+.container {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px 25px;
+}
+
+.loader img {
+    width: 100px;
+    height: 100px;
+    animation: up 0.9s infinite cubic-bezier(0.41, 0.02, 0, 1.15);
+}
+
+.second{
+    animation-delay: 0.2s !important;
+}
+
+
+.third{
+    animation-delay: 0.5s !important;
+}
+
+@keyframes up {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.scroll {
+    border: none;
+    background-color: skyblue;
+    padding: 10px 15px;
+    font-size: 14pt;
+    cursor: pointer;
+    position: fixed;
+    right: 30px;
+    bottom: 10px;
+}

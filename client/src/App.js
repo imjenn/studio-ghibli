@@ -7,6 +7,7 @@ import {
 import FilmList from './components/Films/FilmList/FilmList';
 import Footer from './views/Footer/Footer';
 import Nav from './views/Nav/Nav';
+import Register from './components/Register/Register';
 
 
 function App() {
@@ -15,8 +16,9 @@ function App() {
       <BrowserRouter>
         <Nav />
         <Routes>
-          <Route path="/" />
-          <Route path="/films" element={<FilmList />} />
+          <Route path='/' />
+          <Route path='/films' element={<FilmList />} />
+          <Route path='/register' element={<Register />} />
         </Routes>
         <Footer />
       </BrowserRouter>
