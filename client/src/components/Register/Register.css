@@ -39,7 +39,7 @@ form input {
     margin-right: 7px;
 }
 
-button {
+.register-button {
     border: none;
     border-radius: 7px;
     background-color: crimson;

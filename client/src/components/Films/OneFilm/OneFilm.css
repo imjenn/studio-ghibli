@@ -1,0 +1,19 @@
+.film-cover-image {
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+.film-cover-image img {
+    border-radius: 30px;
+    transition: transform 0.5s ease;
+}
+
+.film-cover-image:hover img {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.film-cover-image + h2,
+.film-cover-image + h2 + h3  {
+    color: black;
+}

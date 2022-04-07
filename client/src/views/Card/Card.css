@@ -4,6 +4,11 @@
 
 .props-card img {
     height: 600px;
+    overflow: hidden;
+}
+
+.props-card img:hover {
+    transform: scale(1.2)
 }
 
 .props-card h2, .props-card h3, {

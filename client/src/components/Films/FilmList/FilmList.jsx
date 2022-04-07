@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './FilmList.css';
 import search from '../../../assets/search-icon.png';
 import soot from '../../../assets/soot.png';
@@ -10,14 +11,14 @@ const FilmList = (props) => {
     const [filteredFilms, setFilteredFilms] = useState([]);
     const [visible, setVisible] = useState(false);
 
-    const { isLoading, data } = useHttp('films');
+    const { isLoading, data } = useHttp('films', '');
 
     const loadingMessage = isLoading ? (
         <div className="container">
             <div className="loader">
-                <img className="first" src={soot} alt=""/>
-                <img className="second" src={soot} alt=""/>
-                <img className="third" src={soot} alt=""/>
+                <img className="first" src={soot} alt="" />
+                <img className="second" src={soot} alt="" />
+                <img className="third" src={soot} alt="" />
             </div>
         </div>
     ) : null;
@@ -64,13 +65,15 @@ const FilmList = (props) => {
 
     const filmList = filteredFilms.map((film) => {
         return (
-            <OneFilm
-                key={film.id}
-                title={film.title}
-                image={film.image}
-                originalTitle={film.original_title}
-                desscription={film.desscription}
-            />
+            <Link to={`/film/${film.id}`}>
+                <OneFilm
+                    key={film.id}
+                    title={film.title}
+                    image={film.image}
+                    originalTitle={film.original_title}
+                    desscription={film.desscription}
+                />
+            </Link >
         )
     })
 
@@ -88,7 +91,6 @@ const FilmList = (props) => {
             <div className="film-list">
                 {filmList}
             </div>
-
             <button
                 className="scroll"
                 onClick={scrollToTop}

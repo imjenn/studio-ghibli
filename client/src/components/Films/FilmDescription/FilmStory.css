@@ -1,0 +1,39 @@
+.film-story-container {
+    display: flex;
+}
+
+.left-container img { 
+    height: 700px;
+    margin: 3em 7em 0 7em;
+}
+
+.left-container div {
+    text-align: center;
+}
+
+.left-container b {
+    font-size: 15pt;
+}
+
+.left-container ul li {
+    list-style-type: none;
+    text-align: left;
+    width: 40%;
+    margin: 10px auto;
+}
+
+.right-container {
+    height: 60%;
+    width: 60%;
+    overflow: auto;
+    margin: 3em 7em;
+}
+
+.right-container p {
+    width: 750px;
+    line-height: 20px;
+}
+
+.right-container img {
+    height: 30em;
+}

@@ -84,7 +84,7 @@ const Register = () => {
                 <p>Already registered?</p> 
                 <a href="">Log in</a>
             </div>
-            <button>Sign Up</button>
+            <button className="register-button">Sign Up</button>
         </form>
     )
 }
