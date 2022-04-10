@@ -11,7 +11,9 @@ const Nav = () => {
                     <li>
                         <Link to="/films">Films</Link>
                     </li>
-                    <li>About</li>
+                    <li>
+                        <Link to="/about">About</Link>
+                    </li>
                     <li>Shop</li>
                 </ul>
                 <div className="nav-cart">

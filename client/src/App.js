@@ -4,6 +4,7 @@ import {
   Route
 } from 'react-router-dom';
 
+import About from './views/About/About';
 import FilmList from './components/Films/FilmList/FilmList';
 import FilmStory from './components/Films/FilmDescription/FilmStory';
 import Footer from './views/Footer/Footer';
@@ -11,7 +12,7 @@ import Nav from './views/Nav/Nav';
 import Register from './components/Register/Register';
 
 
-function App() {
+function App() {  
   return (
     <div className="App">
       <BrowserRouter>
@@ -21,6 +22,7 @@ function App() {
           <Route path='/films' element={<FilmList />} />
           <Route path='/film/:id' element={<FilmStory />} />
           <Route path='/register' element={<Register />} />
+          <Route path='/about' element={<About />} />
         </Routes>
         <Footer />
       </BrowserRouter>

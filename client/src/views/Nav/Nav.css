@@ -1,7 +1,8 @@
 nav {
     display: flex;
-    background-color: skyblue;
-    color: black;
+    /* background-color: skyblue; */
+    background-color: #0970a8;
+    color: white;
     place-items: center;
     justify-content: space-between;
 }
