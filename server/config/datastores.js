@@ -13,6 +13,8 @@
  * https://sailsjs.com/config/datastores
  */
 
+const env = require('./env/production');
+
 module.exports.datastores = {
 
 
@@ -49,9 +51,8 @@ module.exports.datastores = {
     *                                                                          *
     ***************************************************************************/
     adapter: 'sails-mysql',
-    url: 'mysql://root:rootroot@localhost:3306/ghibli_users',
+    url: env.datastores.default.url,
 
   },
-
 
 };
