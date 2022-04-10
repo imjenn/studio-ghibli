@@ -1,24 +1,31 @@
 import Cart from '../Cart/CartIcon';
-import { Link } from 'react-router-dom';
 import './Nav.css';
+import cart from '../../assets/cart.jpeg';
 
 const Nav = () => {
     return (
         <nav>
-            <img src="https://upload.wikimedia.org/wikipedia/sco/thumb/c/ca/Studio_Ghibli_logo.svg/300px-Studio_Ghibli_logo.svg.png" alt="Studio Ghibli logo" />
+            <a href="/">
+                <img src="https://upload.wikimedia.org/wikipedia/sco/thumb/c/ca/Studio_Ghibli_logo.svg/300px-Studio_Ghibli_logo.svg.png" alt="Studio Ghibli logo" />
+            </a>
             <div>
                 <ul>
                     <li>
-                        <Link to="/films">Films</Link>
+                        <a href="/films">Films</a>
                     </li>
                     <li>
-                        <Link to="/about">About</Link>
+                        <a href="/about">About</a>
                     </li>
-                    <li>Shop</li>
+                    <li>
+                        <a href="">Shop</a>
+                    </li>
                 </ul>
                 <div className="nav-cart">
-                    <a href="">Login/Register</a>
-                    <p><Cart /></p>
+                    <a href="/register">Login/Register</a>
+                    <p>
+                        <Cart />
+                        <img src={cart} alt=""/>
+                    </p>
                 </div>
             </div>
         </nav>

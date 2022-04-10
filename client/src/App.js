@@ -8,6 +8,7 @@ import About from './views/About/About';
 import FilmList from './components/Films/FilmList/FilmList';
 import FilmStory from './components/Films/FilmDescription/FilmStory';
 import Footer from './views/Footer/Footer';
+import Main from './views/Main/Main';
 import Nav from './views/Nav/Nav';
 import Register from './components/Register/Register';
 
@@ -18,7 +19,7 @@ function App() {
       <BrowserRouter>
         <Nav />
         <Routes>
-          <Route path='/' />
+          <Route path='/' element={<Main />} />
           <Route path='/films' element={<FilmList />} />
           <Route path='/film/:id' element={<FilmStory />} />
           <Route path='/register' element={<Register />} />
