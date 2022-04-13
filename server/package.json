@@ -9,7 +9,7 @@
     "bcrypt": "^5.0.1",
     "sails": "^1.5.2",
     "sails-hook-orm": "^4.0.0",
-    "sails-hook-sockets": "^2.0.0",
+    "sails-hook-sockets": "^0.13.5",
     "sails-mysql": "2.0.0"
   },
   "devDependencies": {
