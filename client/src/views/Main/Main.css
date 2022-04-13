@@ -3,26 +3,26 @@
     background-attachment: fixed;
     background-size: cover;
     width: 100%;
-    height: 150vh;
+    height: 100%;
+}
+
+.blank {
+    height: 100vh;
 }
 
 .all-films-button {
     color: black;
     z-index: 5;
-    position: absolute;
-    margin-top: 450px;
-    right: 120px;
+    text-align: right;
+    width: 100vw;
+    margin-right: 13%;
 }
 
 .main-film-body {
     background-color: #fff;
-    position: absolute;
+    /* position: relative; */
+    /* transform: translateY(60vh); */
     width: 100%;
-    height: 350px;
-    margin-top: 1600px;
-}
-
-.main-film-body {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,9 +34,9 @@
 
 .film-cards {
     display: flex;
-    height: 300px;
     width: 100%;
     justify-content: center;
+    margin-bottom: 5%;
 }
 
 h3 {
@@ -44,6 +44,7 @@ h3 {
     position: absolute;
     bottom: 0;
     margin-left: 10px;
+    font-size: 20pt;
 }
 
 .card {
@@ -120,4 +121,37 @@ h3 {
     position: relative;
     left: 50px;
     transition: 0.4s ease-out;
+}
+
+.main-shop-body {
+    display: flex;
+    flex-direction: column;
+    /* width: 70%; */
+    /* margin: 5em auto; */
+    background-color: white;
+}
+
+.main-shop-body h2 {
+    text-align: center;
+}
+
+.main-shop {
+    width: 70%;
+    margin: 5em auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10em;
+}
+
+.main-shop-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-shop-card img {
+    height: 300px;
+}
+
+.main-shop-card h4 {
+    text-align: center;
 }

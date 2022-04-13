@@ -4,8 +4,9 @@ footer {
     justify-content: space-around;
     background-color: lightgrey;
     text-align: center;
-    /* position: relative; */
-    margin-top: 50vh;
+    /* position: absolute; */
+    /* transform: translateY(100rem); */
+    width: 100%;
 }
 
 .footer__section {

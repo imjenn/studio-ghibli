@@ -5,6 +5,7 @@ const Main = () => {
     return (
         <div className="main-container">
             <div className="main-body">
+                <div className="blank"></div>
                 <div className="main-film-body">
                     <h2>FILMOGRAPHY</h2>
                     <div className="film-cards">
@@ -25,6 +26,23 @@ const Main = () => {
                         </Link>
                     </div>
                     <a className="all-films-button" href="/films">View All Films</a>
+                </div>
+                <div className="main-shop-body">
+                    <h2>VIEW SHOP</h2>
+                    <div className="main-shop">
+                        <div className="main-shop-card">
+                            <img src="https://i0.wp.com/ckwai.com/wp-content/uploads/2021/09/313575.png?fit=1000%2C1000&ssl=1" alt="Studio Ghibli sweater" />
+                            <h4>Sweaters</h4>
+                        </div>
+                        <div className="main-shop-card">
+                            <img src="https://ae01.alicdn.com/kf/HTB1AOwqdoGF3KVjSZFoq6zmpFXaf/Spirit-Away-totoro-t-shirt-clothes-cartoon-Anime-Japanese-women-tshirt-t-shirt-female-kawaii-Studio.jpg_640x640q80.jpg.webp" alt="Studio Ghibli tee" />
+                            <h4>T-Shirts</h4>
+                        </div>
+                        <div className="main-shop-card">
+                            <img src="https://ghibli.store/wp-content/uploads/2020/04/productimage1004821216_2nd.jpg" alt="Studio Ghibli accessories" />
+                            <h4>Accessories</h4>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
