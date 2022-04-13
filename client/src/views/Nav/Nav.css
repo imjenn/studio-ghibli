@@ -1,6 +1,5 @@
 nav {
     display: flex;
-    /* background-color: #0970a8; */
     background-color: 000;
     color: black;
     place-items: center;
@@ -57,13 +56,87 @@ nav a {
 .nav-cart p {
     display: flex;
     place-items: center;
-    /* border: 1px solid grey;
-    border-radius: 30px;
-    padding: 5px 15px; */
 }
 
 .nav-cart p img {
     height: 40px;
     width: 40px;
-    /* border-radius: 30px; */
 }
+
+.menu {
+    display: none;
+}
+
+#dropdown-menu {
+    height: 300px;
+    width: 250px;
+    background-color: white;
+    color: black;
+    margin-top: 40%;
+    right: 0;
+    border: 1px solid lightgrey;
+    position: absolute;
+    font-size: 16pt;
+}
+
+#dropdown-menu ul {
+    display: inline;
+}
+
+#dropdown-menu ul li {
+    margin: 25px 0;
+}
+
+@media only screen and (max-width: 1600px) {
+    nav {
+        font-size: 10pt;
+    }
+    
+    .nav-cart {
+        width: 35%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {    
+    .nav-cart {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {   
+    /* .nav-cart {
+        width: 50%;
+    } */
+
+    .menu {
+        width: 100%;
+        display: inline-flex;
+        flex-direction: row-reverse;
+    }
+
+    .menu img {
+        width: 35px;
+        height: 35px;
+    }
+
+    nav ul, .nav-cart {
+        display: none;
+    }
+}
+
+/* @media only screen and (max-width: 900px) {   
+    .menu {
+        width: 100%;
+        display: inline-flex;
+        flex-direction: row-reverse;
+    }
+
+    .menu img {
+        width: 35px;
+        height: 35px;
+    }
+
+    nav ul, .nav-cart {
+        display: none;
+    }
+} */
