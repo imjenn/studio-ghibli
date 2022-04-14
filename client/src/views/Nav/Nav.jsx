@@ -15,7 +15,7 @@ const Nav = () => {
         }
     }
 
-    window.addEventListener('mouseup', function(e) {
+    window.addEventListener('mouseup', function (e) {
         var x = document.querySelector('#dropdown-menu');
         if (!document.getElementById('dropdown-menu').contains(e.target)) {
             x.style.display = "none";
@@ -60,11 +60,21 @@ const Nav = () => {
                 openMenu &&
                 <div id="dropdown-menu">
                     <ul>
-                        <li>Films</li>
-                        <li>About</li>
-                        <li>Shop</li>
-                        <li>Lofi</li>
-                        <li>Login/Register</li>
+                        <li>
+                            <a href="/films">Films</a>
+                        </li>
+                        <li>
+                            <a href="/about">About</a>
+                        </li>
+                        <li>
+                            <a href="">Shop</a>
+                        </li>
+                        <li>
+                            <a href="">Music</a>
+                        </li>
+                        <li>
+                            <a href="/register">Login/Register</a>
+                        </li>
                     </ul>
                 </div>
             }
