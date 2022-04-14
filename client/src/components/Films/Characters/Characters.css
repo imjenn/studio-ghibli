@@ -1,0 +1,22 @@
+.character-card-wrapper {
+    display: flex;
+    overflow: auto;
+    border: 1px solid lightgrey;
+    border-radius: 50px;
+    padding: 50px 10px;
+}
+
+.character-container {
+    border-radius: 50px;
+    padding: 5% 10%;
+    width: 200px;
+    margin-right: 50px;
+}
+
+.character-container:nth-of-type(2n) {
+    background-color: #fae49f;
+}
+
+.character-container:nth-of-type(2n+1) {
+    background-color: #72a9d6;
+}

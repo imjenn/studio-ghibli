@@ -5,34 +5,20 @@ import useHttp from '../../../hooks/use-http';
 import './FilmStory.css';
 
 import Characters from '../Characters/Characters';
+import arrow from '../../../assets/down-arrow-svgrepo-com.svg';
 
 const FilmStory = (props) => {
     const { id } = useParams();
     const { isLoading, data } = useHttp('films', id)
     const [filmData, setFilmData] = useState([]);
-
-    // useEffect(() => {
-    //     if (data.people && !isLoading) {
-    //         let promise = axios.all(data.people.map((endpoint) => axios(endpoint))).then((res) => {
-    //             console.log(res.data)
-    //             setFilmData(res.data)
-    //         })
-    //         console.log(filmData)
-    //     };
-    // }, [])
-
-    // console.log(filmData)
+    const [showData, setShowData] = useState(false);
 
     let arr = [];
     const characters = data.people ? data.people.map((person) => arr.push(person)) : null;
-    // console.log(arr)
 
     const fetchChars = () => {
-        Promise.all(arr.map((endpoint) => axios(endpoint))).then((res) => {
-            console.log(res[0].data)
-            setFilmData(res[0].data)
-        })
-        console.log(filmData)
+        Promise.all(arr.map((endpoint) => axios(endpoint))).then((res) => setFilmData(res))
+        showData ? setShowData(false) : setShowData(true);
     }
 
     // Time conversion
@@ -58,24 +44,17 @@ const FilmStory = (props) => {
                 <img src={data.movie_banner} alt="Movie banner" />
                 <p>{data.description}</p>
                 <div>
-                    <h2>Characters</h2>
-                    {JSON.stringify(data.people)} <br />
-                    **** <br />
-                    <button onClick={fetchChars}>Characters</button> <br /><br />
-                    {/* {filmData ? JSON.stringify(filmData): null} */}
-                    <Characters data={filmData} />
-                    {/* {filmData
-                        ? <div>
-                            <p>{filmData.name}</p>
-                            <p>{filmData.gender}</p>
-                            <p>{filmData.age}</p>
-                            <p>{filmData.eye_color}</p>
-                            <p>{filmData.hair_color}</p>
+                    <div className="characters" onClick={fetchChars}>
+                        <div className="characters-header">
+                            <h2>Characters</h2>
+                            <img src={arrow} alt="" />
                         </div>
-                        : null} */}
-                    {/* {filmData ? filmData.map((data) => {
-                        <p>{data.data}</p>
-                    }) : null} */}
+                        {
+                            showData
+                                ? <Characters data={filmData} />
+                                : null
+                        }
+                    </div>
                 </div>
                 <div>
                     <h2>Species</h2>

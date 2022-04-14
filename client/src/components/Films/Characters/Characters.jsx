@@ -1,19 +1,27 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import Card from '../../../views/Card/Card';
+import './Characters.css';
 
 const Characters = (props) => {
-    // const [filmData, setFilmData] = useState([]);
-    // console.log(props.data)
 
     return (
         <Card>
-            <div>
-                <p>{props.data.name}</p>
-                <p>{props.data.gender}</p>
-                <p>{props.data.age}</p>
-                <p>{props.data.eye_color}</p>
-                <p>{props.data.hair_color}</p>
+            <div className="character-card-wrapper">
+                {
+                    props.data.length > 1 &&
+                    props.data.map((data, index) => {
+                        return (
+                            <div className="character-container">
+                                <h2>{data.data.name}</h2>
+                                <p><b>Gender:</b> {data.data.gender}</p>
+                                <p><b>Age:</b> {data.data.age}</p>
+                                <p><b>Hair color:</b> {data.data.hair_color}</p>
+                                <p><b>Eye color:</b> {data.data.eye_color}</p>
+                            </div>
+                        )
+                    })
+                }
             </div>
         </Card>
     )
