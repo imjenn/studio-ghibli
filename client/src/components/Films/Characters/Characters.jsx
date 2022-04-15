@@ -1,15 +1,11 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
-import Card from '../../../views/Card/Card';
 import './Characters.css';
 
 const Characters = (props) => {
-
     return (
-        <Card>
+        <>
             <div className="character-card-wrapper">
                 {
-                    props.data.length > 1 &&
+                    props.data.length > 1 ?
                     props.data.map((data, index) => {
                         return (
                             <div className="character-container">
@@ -20,10 +16,10 @@ const Characters = (props) => {
                                 <p><b>Eye color:</b> {data.data.eye_color}</p>
                             </div>
                         )
-                    })
+                    }) : <b>No characters to display</b>
                 }
             </div>
-        </Card>
+        </>
     )
 }
 

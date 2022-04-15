@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import useHttp from '../../../hooks/use-http';
@@ -49,11 +49,7 @@ const FilmStory = (props) => {
                             <h2>Characters</h2>
                             <img src={arrow} alt="" />
                         </div>
-                        {
-                            showData
-                                ? <Characters data={filmData} />
-                                : null
-                        }
+                        { showData && <Characters data={filmData} /> }
                     </div>
                 </div>
                 <div>
