@@ -1,0 +1,7 @@
+form img {
+    position: absolute;
+    width: 30px;
+    margin-left: -40px;
+    margin-top: 5px;
+    cursor: pointer;
+}

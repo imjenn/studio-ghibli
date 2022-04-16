@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 // import { useHistory } from 'react-router-dom';
 import axios from 'axios';
+import eye from '../../assets/eye-svgrepo-com.svg';
 import './Register.css';
 
 const Register = () => {
@@ -23,7 +24,10 @@ const Register = () => {
     const registerHandler = (e) => {
         e.preventDefault();
         console.log(newUser);
-        if (password !== confirmPassword || password.length === 0) {
+        if (password != confirmPassword) {
+            setError("Passwords do not match.")
+        }
+        else if (password.length === 0) {
             setError("Please enter a valid password.")
         } else {
             axios.post('http://localhost:1337/register', newUser)
@@ -37,12 +41,19 @@ const Register = () => {
         }
     }
 
-    console.log(newUser);
+    const showPassword = (e) => {
+        const pass = document.getElementById(e);
+        if (pass.type === "password") {
+            pass.type = "text"
+        } else {
+            pass.type = "password"
+        }
+    }
 
     return (
         <form onSubmit={registerHandler}>
-            { error ? <p>{error}</p> : null }
             <h1>Create an Account</h1>
+            { error ? <p style={{color: 'crimson'}}>{error}</p> : null }
             <div>
                 <input 
                     type="text" 
@@ -68,21 +79,33 @@ const Register = () => {
             </div>
             <div>
                 <input 
-                    type="text" 
+                    type="password" 
                     placeholder="Password" 
+                    id="password"
                     onChange={(e) => setPassword(e.target.value)}
+                />
+                <img 
+                    src={eye} 
+                    alt="Display password icon" 
+                    onClick={(e) => showPassword("password")} 
                 />
             </div>
             <div>
                 <input 
-                    type="text" 
+                    type="password" 
                     placeholder="Confirm Password" 
+                    id="confirm-password"
                     onChange={(e) => setConfirmPassword(e.target.value)}
+                />
+                <img 
+                    src={eye} 
+                    alt="Display password icon" 
+                    onClick={(e) => showPassword("confirm-password")} 
                 />
             </div>
             <div className="login-link">
                 <p>Already registered?</p> 
-                <a href="">Log in</a>
+                <a href="/login">Log in</a>
             </div>
             <button className="register-button">Sign Up</button>
         </form>

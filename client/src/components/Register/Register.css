@@ -29,7 +29,6 @@ form input {
 
 .login-link {
     display: flex;
-    /* justify-content: flex-end; */
     place-items: center;
     text-align: center;
     margin-left: 60%;
@@ -41,10 +40,18 @@ form input {
 
 .register-button {
     border: none;
-    border-radius: 7px;
-    background-color: crimson;
-    color: #fff;
+    border: 1px solid grey;
+    border-radius: 30px;
+    background-color: #fff;
+    color: #000;
     font-size: 15pt;
     padding: 7px 15px;
     margin-left: 73%;
+    cursor: pointer;
+    transition: 0.25s ease-in-out;
+}
+
+.register-button:hover {
+    background-color: #000;
+    color: #fff;
 }
