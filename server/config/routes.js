@@ -10,5 +10,10 @@
 
 module.exports.routes = {
 
+    // Login
+    'POST /login': 'UserController.login',
+
+    // Reigster
+    'POST /register': 'UserController.register'
 
 };
