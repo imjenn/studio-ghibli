@@ -39,7 +39,7 @@ const Nav = () => {
                         <a href="">Shop</a>
                     </li>
                     <li>
-                        <a href="">Music</a>
+                        <a href="/music">Music</a>
                     </li>
                 </ul>
                 <div className="nav-cart">
@@ -70,7 +70,7 @@ const Nav = () => {
                             <a href="">Shop</a>
                         </li>
                         <li>
-                            <a href="">Music</a>
+                            <a href="/music">Music</a>
                         </li>
                         <li>
                             <a href="/register">Login/Register</a>

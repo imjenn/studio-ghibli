@@ -8,6 +8,7 @@ import About from './views/About/About';
 import FilmList from './components/Films/FilmList/FilmList';
 import FilmStory from './components/Films/FilmDescription/FilmStory';
 import Footer from './views/Footer/Footer';
+import Lofi from './views/Lofi/Lofi';
 import Login from './components/Login/Login';
 import Main from './views/Main/Main';
 import Nav from './views/Nav/Nav';
@@ -26,6 +27,7 @@ function App() {
           <Route path='/register' element={<Register />} />
           <Route path='/login' element={<Login />} />
           <Route path='/about' element={<About />} />
+          <Route path='/music' element={<Lofi />} />
         </Routes>
         <Footer />
       </BrowserRouter>
