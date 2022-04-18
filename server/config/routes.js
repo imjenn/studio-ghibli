@@ -10,10 +10,13 @@
 
 module.exports.routes = {
 
+    // USER ROUTES //
     // Login
     'POST /login': 'UserController.login',
-
     // Reigster
-    'POST /register': 'UserController.register'
+    'POST /register': 'UserController.register',
+
+    // PRODUCT ROUTES //
+    'POST /newproduct' : 'ProductController.create'
 
 };
