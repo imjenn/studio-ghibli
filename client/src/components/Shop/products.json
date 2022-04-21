@@ -1,0 +1,38 @@
+[
+    {
+        "id": "1",
+        "image": "https://images.unsplash.com/photo-1514927298007-a2b56e5270e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2013&q=80",
+        "name": "Cafe Sua Da",
+        "description": "Strong, bold, and thicc",
+        "price": 3.50
+    },
+    {
+        "id": "2",
+        "image": "https://awsimages.detik.net.id/community/media/visual/2021/12/19/3-trik-bikin-kopi-espresso-tanpa-mesin-hasilnya-tetap-nikmat.jpeg?w=700&q=90",
+        "name": "Espresso",
+        "description": "Espresso your feelings with a shot",
+        "price": 2.50
+    },
+    {
+        "id": "3",
+        "image": "https://images.unsplash.com/photo-1582097427030-1b45aa92c9f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2013&q=80",
+        "name": "Latte",
+        "description": "You'll love it a latte",
+        "price": 3.50
+    },
+    {
+        "id": "4",
+        "image": "https://images.unsplash.com/photo-1571015688350-6245b0af0179?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2406&q=80",
+        "name": "Mocha",
+        "description": "We promise it will mocha you happy",
+        "price": 4.50
+    },
+    {
+        "id": "5",
+        "image": "https://cdn.buttercms.com/AB7ud4YSE6nmOX0iGlgA",
+        "name": "Americano",
+        "description": "This hot drink will give you deja brew",
+        "price": 2.50
+    }
+]
+
