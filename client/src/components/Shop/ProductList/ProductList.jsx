@@ -4,13 +4,14 @@ import SHOP_ITEMS from '../products.json'
 const ProductList = (props) => {
     const shopItems = SHOP_ITEMS.map((item) => {
         return (
-            <ProductItem>
+            <ProductItem
                 key={item.id}
                 id={item.id}
                 image={item.image}
-                image={item.name}
-                image={item.price}
-            </ProductItem>
+                name={item.name}
+                description={item.description}
+                price={item.price}
+            />
         )
     });
 

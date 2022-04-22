@@ -46,7 +46,7 @@ const Nav = (props) => {
                         <a href="/about">About</a>
                     </li>
                     <li>
-                        <a href="">Shop</a>
+                        <a href="/shop">Shop</a>
                     </li>
                     <li>
                         <a href="/music">Music</a>
@@ -79,7 +79,7 @@ const Nav = (props) => {
                             <a href="/about">About</a>
                         </li>
                         <li>
-                            <a href="">Shop</a>
+                            <a href="/shop">Shop</a>
                         </li>
                         <li>
                             <a href="/music">Music</a>

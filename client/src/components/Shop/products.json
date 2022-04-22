@@ -1,38 +1,38 @@
 [
     {
         "id": "1",
-        "image": "https://images.unsplash.com/photo-1514927298007-a2b56e5270e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2013&q=80",
-        "name": "Cafe Sua Da",
-        "description": "Strong, bold, and thicc",
-        "price": 3.50
+        "image": "https://enez76gwp29.exactdn.com/wp-content/uploads/2020/12/redirect12092020081216-1.jpg?strip=all&lossy=1&ssl=1",
+        "name": "Totoro Tee",
+        "description": "Heavyweight classic unisex tee",
+        "price": 19.50
     },
     {
         "id": "2",
-        "image": "https://awsimages.detik.net.id/community/media/visual/2021/12/19/3-trik-bikin-kopi-espresso-tanpa-mesin-hasilnya-tetap-nikmat.jpeg?w=700&q=90",
-        "name": "Espresso",
-        "description": "Espresso your feelings with a shot",
-        "price": 2.50
+        "image": "https://enez76gwp29.exactdn.com/wp-content/uploads/2020/11/redirect11302020071109-1.jpg?strip=all&lossy=1&ssl=1",
+        "name": "Spirited Away Haku Sweatshirt",
+        "description": "A cool sweater",
+        "price": 24.98
     },
     {
         "id": "3",
-        "image": "https://images.unsplash.com/photo-1582097427030-1b45aa92c9f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2013&q=80",
-        "name": "Latte",
-        "description": "You'll love it a latte",
-        "price": 3.50
+        "image": "https://render.fineartamerica.com/images/rendered/default/t-shirt/23/2/images/artworkimages/medium/3/studio-ghibli-dyah-kurmo-transparent.png?targetx=0&targety=0&imagewidth=430&imageheight=575&modelwidth=430&modelheight=575",
+        "name": "Studio Ghibli Tee",
+        "description": "cools",
+        "price": 23.50
     },
     {
         "id": "4",
-        "image": "https://images.unsplash.com/photo-1571015688350-6245b0af0179?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2406&q=80",
-        "name": "Mocha",
-        "description": "We promise it will mocha you happy",
-        "price": 4.50
+        "image": "https://cdn.shopify.com/s/files/1/0187/7082/1184/products/product-image-1577193928_grande.jpg?v=1605144164",
+        "name": "Phone Case",
+        "description": "Protect your phone",
+        "price": 14.50
     },
     {
         "id": "5",
-        "image": "https://cdn.buttercms.com/AB7ud4YSE6nmOX0iGlgA",
-        "name": "Americano",
-        "description": "This hot drink will give you deja brew",
-        "price": 2.50
+        "image": "https://enez76gwp29.exactdn.com/wp-content/uploads/2020/04/22cmfontbTotorobfontfontbplushbfonttoysholdfontbpillow_2nd.jpg?strip=all&lossy=1&ssl=1",
+        "name": "Totoro Plush",
+        "description": "",
+        "price": 14.95
     }
 ]
 

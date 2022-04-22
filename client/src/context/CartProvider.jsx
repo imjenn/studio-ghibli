@@ -11,7 +11,7 @@ const cartReducer = (state, action) => {
     // Adding a item
     if (action.type === 'ADD_ITEM') {
         const updatedTotalAmount = state.totalAmount + (action.item.price * action.item.amount);
-        // Find index of an existing item
+        // Find indexd of an existing item
         const existingItemIndex = state.items.findIndex(
             (item) => item.id === action.item.id
         );
@@ -64,7 +64,7 @@ const CartProvider = (props) => {
 
     }
 
-    const CartContext = {
+    const cartContext = {
         items: cartState.items,
         totalAmount: cartState.totalAmount,
         addItem: addItemToCartHandler,
@@ -73,7 +73,7 @@ const CartProvider = (props) => {
     }
 
     return (
-        <CartContext.Provider value={CartContext}>
+        <CartContext.Provider value={cartContext}>
             {props.children}
         </CartContext.Provider>
     )

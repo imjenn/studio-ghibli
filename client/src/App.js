@@ -17,13 +17,12 @@ import ProductList from './components/Shop/ProductList/ProductList'
 import Register from './components/Register/Register';
 import Terms from './views/Misc/Terms';
 
-
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Nav />
-        {/* <CartProvider> */}
+    <CartProvider>
+      <div className="App">
+        <BrowserRouter>
+          <Nav />
           <Routes>
             <Route path='/' element={<Main />} />
             <Route path='/films' element={<FilmList />} />
@@ -33,11 +32,12 @@ function App() {
             <Route path='/about' element={<About />} />
             <Route path='/music' element={<Lofi />} />
             <Route path='/terms' element={<Terms />} />
+            <Route path='/shop' element={<ProductList />} />
           </Routes>
-        {/* </CartProvider> */}
-        <Footer />
-      </BrowserRouter>
-    </div>
+          <Footer />
+        </BrowserRouter>
+      </div>
+    </CartProvider>
   );
 }
 

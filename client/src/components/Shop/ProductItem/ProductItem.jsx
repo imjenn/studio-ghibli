@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import CartContext from "../../../context/cart-context";
+import Card from '../../../views/Card/Card'
 
 // import { useContext } from 'react';
 // import CartContext from '../../../context/cart-context'
@@ -22,6 +23,7 @@ const ProductItem = (props) => {
             <img src={props.image} alt=""/>
             <div>
                 <h2>{props.name}</h2>
+                <p>{props.description}</p>
                 <p>{props.amount}</p>
                 <p>{props.price}</p>
             </div>
