@@ -1,10 +1,12 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import Cart from '../Cart/CartIcon';
 import './Nav.css';
 import cart from '../../assets/cart.jpeg';
 import menu from '../../assets/menu-svgrepo-com.svg'
+import CartContext from '../../context/cart-context';
 
-const Nav = () => {
+const Nav = (props) => {
+    const cartCtx = useContext(CartContext);
     const [openMenu, setOpenMenu] = useState(false);
 
     const dropMenuHandler = () => {
@@ -21,6 +23,14 @@ const Nav = () => {
             x.style.display = "none";
         }
     });
+
+    const numOfCartItems = (
+        cartCtx.items
+        ? cartCtx.items.reduce((currentNumber, item) => {
+            return currentNumber + item.amount;
+        }, 0)
+        : 0
+    );
 
     return (
         <nav>
@@ -46,7 +56,8 @@ const Nav = () => {
                     <a href="/register">Login/Register</a>
                     <p>
                         <Cart />
-                        <img src={cart} alt="" />
+                        <img src={cart} alt="shopping cart icon" />
+                        <div className="cart-items-icon">{numOfCartItems}</div>
                     </p>
                 </div>
                 <div className="menu" onClick={dropMenuHandler}>
@@ -54,6 +65,7 @@ const Nav = () => {
                         src={menu}
                         alt="hamburger menu icon"
                     />
+                    <div>{numOfCartItems}</div>
                 </div>
             </div>
             {
