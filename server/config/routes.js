@@ -17,6 +17,10 @@ module.exports.routes = {
     'POST /register': 'UserController.register',
 
     // PRODUCT ROUTES //
-    'POST /newproduct' : 'ProductController.create'
+    'POST /newproduct' : 'ProductController.create',
+    'GET /products': 'ProductController.findAll',
+    'GET /product/:productId': 'ProductController.findOne',
+    'PATCH /update/:productId': 'ProductController.update',
+    'DELETE /delete/:productId': 'ProductController.delete'
 
 };

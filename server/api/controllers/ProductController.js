@@ -5,26 +5,45 @@
  * @help        :: See https://sailsjs.com/docs/concepts/actions
  */
 
-const Product = require("../models/Product");
+// const Product = require("../models/Product");
 
 module.exports = {
 
-    create: (req, res) => {
-        Product.create(req.body)
-            .then(product => res.json(product))
-            .catch(err => res.status(400).json(err))
+    create: async function(req, res) {
+        try {
+            const newProduct = {
+                "name": req.body.name,
+                "price": req.body.price,
+                "description": req.body.description,
+                "label": req.body.label,
+                "category": req.body.category,
+                "image": req.body.image
+            }
+
+            const results = await Product.create(newProduct).exec(function(err) {
+                return res.send(results);
+            })
+        } catch (err) {
+            res.serverError(err);
+        }
     },
 
-    findAll: (req, res) => {
-        Product.find()
-            .then(products => res.json(products))
-            .catch(err => res.json(err))
+    findAll: async function(req, res) {
+        try {
+            const products = await Product.find()
+            res.send(products)
+        } catch (err) {
+            res.serverError(err.toString())
+        }
     },
 
-    findOne: (req, res) => {
-        Product.findById(req.params.id) 
-            .then(product => res.json(product))
-            .catch(err => res.json(err))
+    findOne: async function(req, res) {
+        try {
+            const productId = await Product.findOne({ id: req.params.id });
+            res.send(productId);
+        } catch (err) {
+            res.serverError(err.toString())
+        }
     },
 
     update: (req, res) => {
@@ -33,10 +52,14 @@ module.exports = {
             .catch(err => res.status(400).json(err))
     },
 
-    delete: (req, res) => {
-        Product.findByIdAndDelete(req.params.id) 
-            .then(result => res.json({ result: result }))
-            .catch(err => res.json(err))
+    delete: async function(req, res) {
+        try {
+            const productId = req.param('productId')
+            await Product.destroy({ id: productId })
+            res.send(productId)
+        } catch(err) {
+            res.serverError(err.toString())
+        }
     }
 };
 
