@@ -1,3 +1,4 @@
+import './ProductList.css'
 import ProductItem from "../ProductItem/ProductItem"
 import SHOP_ITEMS from '../products.json'
 
@@ -16,11 +17,9 @@ const ProductList = (props) => {
     });
 
     return (
-        <div>
-            <h1>Ghibli Shop</h1>
-            <div>
-                {shopItems}
-            </div>
+        <div className="shop-container">
+            <h1>Studio Ghibli Shop</h1>
+            <div className="shop-items">{shopItems}</div>
         </div>
     )
 }

@@ -1,0 +1,8 @@
+.product-item-container {
+    /* width: 50%; */
+}
+
+.product-item-container img {
+    height: 300px;
+    margin: 30px;
+}

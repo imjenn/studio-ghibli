@@ -1,0 +1,11 @@
+/* .shop-container {
+    display: flex;
+} */
+
+.shop-container h1 {
+    text-align: center;
+}
+
+.shop-items {
+    display: flex;
+}
