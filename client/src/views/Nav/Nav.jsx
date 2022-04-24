@@ -1,5 +1,5 @@
 import { useContext, useState } from 'react';
-import Cart from '../Cart/CartIcon';
+import Cart from '../Cart/Cart';
 import './Nav.css';
 import cart from '../../assets/cart.jpeg';
 import menu from '../../assets/menu-svgrepo-com.svg'
@@ -54,8 +54,8 @@ const Nav = (props) => {
                 </ul>
                 <div className="nav-cart">
                     <a href="/register">Login/Register</a>
-                    <p>
-                        <Cart />
+                    <p onClick={props.onDisplayCart}>
+                        <p>Cart</p>
                         <img src={cart} alt="shopping cart icon" />
                         <div className="cart-items-icon">{numOfCartItems}</div>
                     </p>

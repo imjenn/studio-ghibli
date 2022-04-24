@@ -4,7 +4,10 @@ import {
   Route
 } from 'react-router-dom';
 
+import { useState } from 'react';
+
 import About from './views/About/About';
+import Cart from './views/Cart/Cart';
 import CartProvider from './context/CartProvider';
 import FilmList from './components/Films/FilmList/FilmList';
 import FilmStory from './components/Films/FilmDescription/FilmStory';
@@ -18,11 +21,22 @@ import Register from './components/Register/Register';
 import Terms from './views/Misc/Terms';
 
 function App() {
+  const [displayCart, setDisplayCart] = useState(false);
+
+  const displayCartHandler = () => {
+    setDisplayCart(true);
+  }
+
+  const hideCartHandler = () => {
+    setDisplayCart(false);
+  }
+
   return (
     <CartProvider>
       <div className="App">
         <BrowserRouter>
-          <Nav />
+          <Nav onDisplayCart={displayCartHandler} />
+          {displayCart && <Cart onHideCart={hideCartHandler} />}
           <Routes>
             <Route path='/' element={<Main />} />
             <Route path='/films' element={<FilmList />} />

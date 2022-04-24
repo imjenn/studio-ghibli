@@ -1,0 +1,13 @@
+.cart-header {
+    display: flex;
+}
+
+.cart-header button {
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    font-size: 20pt;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}

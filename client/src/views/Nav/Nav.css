@@ -57,6 +57,7 @@ nav a {
 .nav-cart p {
     display: flex;
     place-items: center;
+    cursor: pointer;
 }
 
 .nav-cart p img {
