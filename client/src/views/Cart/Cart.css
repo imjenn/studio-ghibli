@@ -11,3 +11,38 @@
     right: 10px;
     top: 10px;
 }
+
+.cart-items {
+    display: flex;
+    place-items: center;
+    justify-content: space-between;    
+}
+
+.cart-items img {
+    width: 20%;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 16pt;
+}
+
+.total ~ button {
+    border: 1px solid grey;
+    border-radius: 30px;
+    background-color: #fff;
+    transition: 0.3s ease-in-out;
+    font-size: 15pt;
+    padding: 7px 15px;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    margin: 40px 10px 0;
+}
+
+.total ~ button:hover {
+    background-color: #000;
+    color: #fff;  
+}

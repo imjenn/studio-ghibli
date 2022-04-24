@@ -23,8 +23,9 @@ const Cart = (props) => {
         <div>
             {cartCtx.items ? cartCtx.items.map((item) => {
                 return (
-                    <div>
+                    <div className="cart-items">
                         <img src={item.image} alt="" />
+                        <p>{item.price}</p>
                     </div>
                 )
             }) : null}
@@ -40,6 +41,11 @@ const Cart = (props) => {
             <div>
                 {cartItems}
             </div>
+            <div className="total">
+                <p>Total:</p>
+                <p>{total}</p>
+            </div>
+            <button>Checkout</button>
         </ModalOverlay>
     )
 }

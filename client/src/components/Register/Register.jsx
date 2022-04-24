@@ -51,7 +51,7 @@ const Register = () => {
     }
 
     return (
-        <form onSubmit={registerHandler}>
+        <form className="registration-form-container" onSubmit={registerHandler}>
             <h1>Create an Account</h1>
             { error ? <p style={{color: 'crimson'}}>{error}</p> : null }
             <div>
