@@ -19,13 +19,9 @@ import Nav from './views/Nav/Nav';
 import ProductList from './components/Shop/ProductList/ProductList'
 import Register from './components/Register/Register';
 import Terms from './views/Misc/Terms';
-import SnackbarContextProvider from './context/snackbar-context';
-import SnackbarContext from './context/snackbar-context'
-import Snackbar from './views/Snackbar/Snackbar'
 
 function App() {
   const [displayCart, setDisplayCart] = useState(false);
-  const snackbarCtx = useContext(SnackbarContext)
 
   const displayCartHandler = () => {
     setDisplayCart(true);
@@ -37,12 +33,10 @@ function App() {
 
   return (
     <CartProvider>
-      <SnackbarContextProvider>
         <div className="App">
           <BrowserRouter>
             <Nav onDisplayCart={displayCartHandler} />
             {displayCart && <Cart onHideCart={hideCartHandler} />}
-            {snackbarCtx.isDisplayed && <Snackbar />}
             <Routes>
               <Route path='/' element={<Main />} />
               <Route path='/films' element={<FilmList />} />
@@ -57,7 +51,6 @@ function App() {
             <Footer />
           </BrowserRouter>
         </div>
-      </SnackbarContextProvider>
     </CartProvider>
   );
 }

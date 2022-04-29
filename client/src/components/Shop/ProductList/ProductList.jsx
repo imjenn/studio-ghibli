@@ -11,7 +11,7 @@ const ProductList = (props) => {
                 image={item.image}
                 name={item.name}
                 description={item.description}
-                price={item.price}
+                price={item.price.toFixed(2)}
             />
         )
     });

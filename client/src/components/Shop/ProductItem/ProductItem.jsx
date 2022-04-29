@@ -24,7 +24,7 @@ const ProductItem = (props) => {
                 <h2>{props.name}</h2>
                 <p>{props.description}</p>
                 <p>{props.amount}</p>
-                <p>{props.price}</p>
+                <p>${props.price}</p>
                 <Form onAddToCart={addToCartHandler} />
             </div>
         </div>

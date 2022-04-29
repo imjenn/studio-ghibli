@@ -1,32 +1,24 @@
-import { useState, useContext, useRef } from 'react';
-import SnackbarContext from '../../../context/snackbar-context';
-import Snackbar from '../../../views/Snackbar/Snackbar';
+import { useState, useRef } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
+
+const notify = () => toast.success('Added to cart', {
+    duration: 3000,
+    position: 'bottom-right'
+})
 
 const ProductForm = (props) => {
-    const amountInputRef = useRef();
-    const [amountIsValid, setValidAmount] = useState(true)
-    const [showSnackbar, setShowSnackbar] = useState(false)
-    const inputRef = useRef();
-    const snackbarCtx = useContext(SnackbarContext)
+    // const amountInputRef = useRef();
 
     const submitHandler = (e) => {
         e.preventDefault();
-        const enteredAmountNum = 1;
-        if (showSnackbar === false) {
-            setShowSnackbar(true);
-        } else {
-            setShowSnackbar(false);
-        }
-        props.onAddToCart(enteredAmountNum)
+        // const enteredAmountNum = 1;
+        props.onAddToCart(1)
     }
 
     return (
         <form style={{width: "100px"}} onSubmit={submitHandler}>
-            <button>Add to Cart</button>
-            { 
-                showSnackbar && 
-                <Snackbar display={showSnackbar}    /> 
-            }
+            <button onClick={notify}>Add to Cart</button>
+            <Toaster />
         </form>
     )
 }

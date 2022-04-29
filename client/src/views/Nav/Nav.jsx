@@ -27,6 +27,8 @@ const Nav = (props) => {
     const numOfCartItems = (
         cartCtx.items
         ? cartCtx.items.reduce((currentNumber, item) => {
+            console.log(currentNumber)
+            console.log(item)
             return currentNumber + item.amount;
         }, 0)
         : 0
