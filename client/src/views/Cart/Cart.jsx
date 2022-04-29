@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import CartContext from '../../context/cart-context';
 import ModalOverlay from '../Modal/Modal'
+import { Link } from 'react-router-dom';
 import './Cart.css';
 
 const Cart = (props) => {
@@ -45,7 +46,7 @@ const Cart = (props) => {
                 <p>Total:</p>
                 <p>{total}</p>
             </div>
-            <button>Checkout</button>
+            <Link to='/checkout' onClick={props.onHideCart}>Checkout</Link>
         </ModalOverlay>
     )
 }

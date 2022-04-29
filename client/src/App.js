@@ -9,6 +9,7 @@ import { useState, useContext } from 'react';
 import About from './views/About/About';
 import Cart from './views/Cart/Cart';
 import CartProvider from './context/CartProvider';
+import Checkout from './components/Shop/Checkout/Checkout'
 import FilmList from './components/Films/FilmList/FilmList';
 import FilmStory from './components/Films/FilmDescription/FilmStory';
 import Footer from './views/Footer/Footer';
@@ -39,6 +40,7 @@ function App() {
             {displayCart && <Cart onHideCart={hideCartHandler} />}
             <Routes>
               <Route path='/' element={<Main />} />
+              <Route path='/checkout' element={<Checkout />} />
               <Route path='/films' element={<FilmList />} />
               <Route path='/film/:id' element={<FilmStory />} />
               <Route path='/register' element={<Register />} />
