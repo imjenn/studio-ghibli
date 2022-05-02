@@ -10,6 +10,7 @@ import About from './views/About/About';
 import Cart from './views/Cart/Cart';
 import CartProvider from './context/CartProvider';
 import Checkout from './components/Shop/Checkout/Checkout'
+import Downloads from './components/Gallery/Downloads';
 import FilmList from './components/Films/FilmList/FilmList';
 import FilmStory from './components/Films/FilmDescription/FilmStory';
 import Footer from './views/Footer/Footer';
@@ -41,6 +42,7 @@ function App() {
             <Routes>
               <Route path='/' element={<Main />} />
               <Route path='/checkout' element={<Checkout />} />
+              <Route path='/gallery' element={<Downloads />} />
               <Route path='/films' element={<FilmList />} />
               <Route path='/film/:id' element={<FilmStory />} />
               <Route path='/register' element={<Register />} />

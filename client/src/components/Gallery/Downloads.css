@@ -1,0 +1,29 @@
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery-image {
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.gallery img {
+    max-width: 50vw;
+    margin-bottom: -4px;
+    transition: 0.25s ease-in-out;
+    -webkit-transition: all 1s ease; /* Safari and Chrome */
+    -moz-transition: all 1s ease; /* Firefox */
+    -ms-transition: all 1s ease; /* IE 9 */
+    -o-transition: all 1s ease; /* Opera */
+    transition: all 1s ease;
+}
+
+.gallery img:hover {
+    opacity: 0.7;
+    -webkit-transform:scale(1.25); /* Safari and Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* IE 9 */
+    -o-transform:scale(1.25); /* Opera */
+   transform:scale(1.25);
+}
