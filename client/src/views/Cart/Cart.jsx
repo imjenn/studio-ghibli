@@ -6,7 +6,7 @@ import './Cart.css';
 
 const Cart = (props) => {
     const cartCtx = useContext(CartContext);
-    const total = cartCtx.totalAmount.toFixed(2);
+    const total = cartCtx.totalAmount;
 
     const cartItemAddHandler = (item) => {
         cartCtx.addItem({ ...item, amount: 1 })
@@ -26,6 +26,11 @@ const Cart = (props) => {
                 return (
                     <div className="cart-items">
                         <img src={item.image} alt="" />
+                        <div className="cart-items-amount">
+                            <b onClick={cartItemRemoveHandler.bind(null, item.id)}>&#x2212;</b>
+                            <p>{item.amount}</p>
+                            <b onClick={cartItemAddHandler.bind(null, item)}>&#x2b;</b>
+                        </div>
                         <p>{item.price}</p>
                     </div>
                 )

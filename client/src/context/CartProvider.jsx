@@ -45,6 +45,25 @@ const cartReducer = (state, action) => {
 
         const existingItem = state.items[existingItemIndex];
         const updatedTotalAmount = state.totalAmount = existingItem.price
+
+        let updatedItems = []
+        if (existingItem.amount === 1) {
+            const updatedItem = state.items.filter((item) => item.id !== action.id);
+            console.log(updatedItem);
+        } else {
+            const updatedItem = {
+                ...existingItem,
+                amount: existingItem.amount - 1
+            };
+            console.log(updatedItem);
+            updatedItems = [...state.items];
+            console.log(updatedItems)
+            updatedItems[existingItemIndex] = updatedItem;
+        }
+        return {
+            items: updatedItems,
+            totalAmount: updatedTotalAmount
+        }
     }
 
     // Clear cart
@@ -62,8 +81,8 @@ const CartProvider = (props) => {
         dispatchCart({ type: 'ADD_ITEM', item: item })
     };
 
-    const removeItemFromCartHandler = (item) => {
-
+    const removeItemFromCartHandler = (id) => {
+        dispatchCart({ type: 'REMOVE_ITEM', id: id })
     }
 
     const clearCartHandler = (items) => {
