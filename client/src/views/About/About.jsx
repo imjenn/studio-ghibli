@@ -34,10 +34,7 @@ const About = () => {
                             </ul>
                         </li>
                         <li>
-                            <a href={`#museum-content`}>Museums</a>
-                        </li>
-                        <li>
-                            <a href={`#media-content`}>Media</a>
+                            <a href={`#museum-content`}>Museum</a>
                         </li>
                     </ol>
                     <div className="about-content-body">
@@ -60,20 +57,18 @@ const About = () => {
                                 <div className="details">
                                     <p>
                                         <b>Born: </b>
-                                    January 5th, 1941 (age 81) in
-                                    <a href="https://www.google.com/search?q=Bunkyo" target="_blank">
-                                            Bunkyo City, Tokyo, Japan
-                                    </a>
+                                        January 5th, 1941 (age 81) in &nbsp;
+                                        <a href="https://www.google.com/search?q=Bunkyo" target="_blank">Bunkyo City, Tokyo, Japan</a>
                                     </p>
                                     <p>
                                         <b>Spouse: </b>
-                                    Akemi Ōta
-                                </p>
+                                        Akemi Ōta
+                                    </p>
                                     <p>
                                         <b>Children: </b>
-                                    Gorō Miyazaki &amp;
-                                    Keisuke Miyazaki
-                                </p>
+                                        Gorō Miyazaki &amp;
+                                        Keisuke Miyazaki
+                                    </p>
                                 </div>
                             </div>
                             <div className="miyazaki-bio">
@@ -99,19 +94,24 @@ const About = () => {
                                 Miyazaki’s Sen to Chihiro no kamikakushi (2001; Spirited Away) captured the top prize at the 2002 Berlin International Film Festival, won best Asian film at the Hong Kong Film Awards, and was named best animated feature at the 2003 Academy Awards. In his native Japan it won best picture at the 2002 Japanese Academy Awards and replaced Titanic as the top-grossing film in Japanese history. In the film, Chihiro, an ordinary if slightly spoiled young girl, wanders away from her parents and enters a realm of gods and magic. There, dubbed with the name Sen, she is forced to make do with her wits in an effort to reclaim her name and return to the human world.
                             </p>
                             <p>
-                                <img src="https://cdn.vox-cdn.com/thumbor/hHzi56bzWh3TaLYx7mHlRHe8UCk=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/20007566/GHI_HowlsMovingCastle_Select1.jpg" alt=""/>
+                                <img src="https://cdn.vox-cdn.com/thumbor/hHzi56bzWh3TaLYx7mHlRHe8UCk=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/20007566/GHI_HowlsMovingCastle_Select1.jpg" alt="" />
                                 Miyazaki followed the phenomenal success of Spirited Away with Hauru no ugoku shiro (2004; Howl’s Moving Castle), the story of a young girl cursed with the body of an old woman and the quest that leads her to a legendary moving castle; it was nominated for an Academy Award in 2006. In 2005 Disney unveiled a restored version of Nausicaä on DVD. Featuring both the original Japanese sound track as well as a new professionally recorded English dub, this release marked the first time that the film was commercially available in its original form in the United States. Gake no ue no Ponyo (2008; Ponyo) was targeted to a younger audience than were most Miyazaki films, but nevertheless it was the top Japanese box-office draw of 2008. Miyazaki later cowrote the screenplays for the Studio Ghibli releases Karigurashi no Arietti (2010; The Secret World of Arrietty), which was based on Mary Norton’s children’s book The Borrowers, and Kokurikozaka kara (2011; From Up on Poppy Hill), a coming-of-age tale adapted from a manga series. The latter film was directed by Miyazaki’s son Gorō.
                             </p>
                             <p>
-                                <img className="film-2n" src="https://i1.sndcdn.com/artworks-000300704310-0nsub8-t500x500.jpg" alt=""/>
+                                <img className="film-2n" src="https://i1.sndcdn.com/artworks-000300704310-0nsub8-t500x500.jpg" alt="" />
                                 Kaze tachinu (2013; The Wind Rises) was an impressionistic take on the life of engineer Horikoshi Jiro, who designed fighter planes used by the Japanese during World War II. The film was based on Miyazaki’s manga of the same name, and it was nominated for an Academy Award in 2014. Miyazaki declared that Kaze tachinu would be his last feature-length film, and he began work on Kemushi no Boro (Boro the Caterpillar), a short film for the Ghibli Museum in Mitaka. Miyazaki’s retirement appeared to be temporary, however; in 2016 he announced that Kemushi no Boro would be expanded to a feature-length release. The film marked Miyazaki’s first project to be done entirely in computer animation. In 2015 he received an honorary Oscar from the Academy of Motion Picture Arts and Sciences.
                             </p>
                         </div>
                         <div id="museum-content">
                             <h2>Studio Ghibli Museum</h2>
-                        </div>
-                        <div id="media-content">
-                            <h2>Media</h2>
+                            <p>
+                                <img src="https://tokyo.for91days.com/wp-content/uploads/sites/16/2017/04/Studio-Ghibli-Tour-01-20140514-www.for91days.com-DSC04739.jpg" alt="" />
+                                When you walk along Kichijoji Avenue, in the shade of the tall green trees of Mitaka's Inokashira Park, you come upon a colorful building. Standing in front of a sign that says "Ghibli Museum, Mitaka", a very large Totoro welcomes you at the entrance. When you look through the portholes, soot-black Dust Bunnies are there as well. But this is not the real entrance. Totoro shows you where the real entrance is.
+                            </p>
+                            <p>
+                                <img src="https://media.cntraveler.com/photos/5c866698ff5475304621749f/16:9/w_2560,c_limit/Ghibli%20Museum_R061NH.jpg" alt="" />
+                                Open the door and welcome to wonderland! Every window and lamp is lovingly hand-crafted with beautiful and colorful stained glass using Ghibli characters, pretty plants and flowers, and forest animals. When the sun is shining, the vivid colors of the glass are reflected in splashes of colored light on the stone floors.
+                            </p>
                         </div>
                     </div>
                 </div>

@@ -1,11 +1,11 @@
 import { useState } from 'react';
-// import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import eye from '../../assets/eye-svgrepo-com.svg';
 import './Register.css';
 
 const Register = () => {
-    // const history = useHistory();
+    const navigate = useNavigate();
 
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
@@ -32,8 +32,9 @@ const Register = () => {
         } else {
             axios.post('http://localhost:1337/register', newUser)
                 .then(res => {
+                    localStorage.setItem("isAuthenticated", "true");
                     console.log(res);
-                    // history.push('/home')
+                    navigate('/gallery')
                 })
                 .catch(err => { 
                     setError("Please fix the values below.")

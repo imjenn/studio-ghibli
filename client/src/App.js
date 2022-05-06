@@ -21,6 +21,10 @@ import Nav from './views/Nav/Nav';
 import ProductList from './components/Shop/ProductList/ProductList'
 import Register from './components/Register/Register';
 import Terms from './views/Misc/Terms';
+import NotFound from './views/NotFound/NotFound';
+import Account from './components/Account/Account';
+
+import ProtectedRoute from './ProtectedRoute';
 
 function App() {
   const [displayCart, setDisplayCart] = useState(false);
@@ -32,6 +36,8 @@ function App() {
   const hideCartHandler = () => {
     setDisplayCart(false);
   }
+
+  console.log(localStorage.getItem("isAuthenticated"))
 
   return (
     <CartProvider>
@@ -51,6 +57,15 @@ function App() {
               <Route path='/music' element={<Lofi />} />
               <Route path='/terms' element={<Terms />} />
               <Route path='/shop' element={<ProductList />} />
+              <Route path="*" element={<NotFound />} />
+              <Route 
+                path="/account" 
+                element={
+                  <ProtectedRoute>
+                    <Account />
+                  </ProtectedRoute>
+                }
+              />
             </Routes>
             <Footer />
           </BrowserRouter>
