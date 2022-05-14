@@ -11,16 +11,20 @@
 module.exports.routes = {
 
     // USER ROUTES //
-    // Login
     'POST /login': 'UserController.login',
-    // Reigster
     'POST /register': 'UserController.register',
 
     // PRODUCT ROUTES //
     'POST /newproduct' : 'ProductController.create',
     'GET /products': 'ProductController.findAll',
     'GET /product/:productId': 'ProductController.findOne',
-    'PATCH /update/:productId': 'ProductController.update',
-    'DELETE /delete/:productId': 'ProductController.delete'
+    'PATCH /product/update/:productId': 'ProductController.update',
+    'DELETE /product/delete/:productId': 'ProductController.delete',
 
+    // IMAGE GALLERY ROUTES //
+    'POST /image/new' : 'ImageGalleryController.create',
+    'GET /images': 'ImageGalleryController.findAll',
+    'GET /image/:imageid': 'ImageGalleryController.findOne',
+    'PATCH /image/update/:imageid': 'ImageGalleryController.update',
+    'DELETE /image/delete/:imageid': 'ImageGalleryController.delete',
 };

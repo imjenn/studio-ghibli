@@ -5,8 +5,6 @@
  * @help        :: See https://sailsjs.com/docs/concepts/actions
  */
 
-// const Product = require("../models/Product");
-
 module.exports = {
 
     create: async function(req, res) {
