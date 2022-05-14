@@ -1,4 +1,5 @@
 import { saveAs } from 'file-saver';
+import GALLERY_IMAGES from './sa-images.json';
 import './Downloads.css';
 
 const Downloads = () => {
@@ -7,39 +8,18 @@ const Downloads = () => {
         saveAs(e.target.src, "chihiro.jpg");
     }
     //To Do: Implement API
-    
+
     return (
         <div className="gallery">
-            <div className="gallery-image">
-                <img onClick={downloadImage} src="https://www.ghibli.jp/gallery/chihiro001.jpg" alt="" />
-            </div>
-            <div className="gallery-image">
-                <img onClick={downloadImage} src="https://www.ghibli.jp/gallery/chihiro002.jpg" alt="" />
-            </div>
-            <div className="gallery-image">
-                <img onClick={downloadImage} src="https://www.ghibli.jp/gallery/chihiro003.jpg" alt="" />
-            </div>
-            <div className="gallery-image">
-                <img src="https://www.ghibli.jp/gallery/chihiro004.jpg" alt="" />
-            </div>
-            <div className="gallery-image">
-                <img src="https://www.ghibli.jp/gallery/chihiro005.jpg" alt="" />
-            </div>
-            <div className="gallery-image">
-                <img src="https://www.ghibli.jp/gallery/chihiro006.jpg" alt="" />
-            </div>
-            <div className="gallery-image">
-                <img src="https://www.ghibli.jp/gallery/chihiro007.jpg" alt="" />
-            </div>
-            <div className="gallery-image">
-                <img src="https://www.ghibli.jp/gallery/chihiro008.jpg" alt="" />
-            </div>
-            <div className="gallery-image">
-                <img src="https://www.ghibli.jp/gallery/chihiro009.jpg" alt="" />
-            </div>
-            <div className="gallery-image">
-                <img src="https://www.ghibli.jp/gallery/chihiro010.jpg" alt="" />
-            </div>
+            {
+                GALLERY_IMAGES.map((image) => {
+                    return (
+                        <div className="gallery-image">
+                            <img src={image} alt="" onClick={downloadImage} />
+                        </div>
+                    )
+                })
+            }
         </div>
     )
 }

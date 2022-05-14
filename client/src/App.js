@@ -13,6 +13,7 @@ import Checkout from './components/Shop/Checkout/Checkout'
 import Downloads from './components/Gallery/Downloads';
 import FilmList from './components/Films/FilmList/FilmList';
 import FilmStory from './components/Films/FilmDescription/FilmStory';
+import Gallery from './components/Gallery/Gallery';
 import Footer from './views/Footer/Footer';
 import Lofi from './views/Lofi/Lofi';
 import Login from './components/Login/Login';
@@ -48,7 +49,8 @@ function App() {
             <Routes>
               <Route path='/' element={<Main />} />
               <Route path='/checkout' element={<Checkout />} />
-              <Route path='/gallery' element={<Downloads />} />
+              <Route exact path='/gallery' element={<Gallery />} />
+              <Route exact path='/gallery/studio-ghibli' element={<Downloads />} />
               <Route path='/films' element={<FilmList />} />
               <Route path='/film/:id' element={<FilmStory />} />
               <Route path='/register' element={<Register />} />
