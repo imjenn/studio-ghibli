@@ -21,6 +21,13 @@ module.exports.routes = {
     'PATCH /product/update/:productId': 'ProductController.update',
     'DELETE /product/delete/:productId': 'ProductController.delete',
 
+    // FILM ROUTES //
+    'POST /film/new' : 'Film.create',
+    'GET /films': 'Film.findAll',
+    'GET /film/:filmid': 'Film.findOne',
+    'PATCH /film/update/:filmid': 'Film.update',
+    'DELETE /film/delete/:filmid': 'Film.delete',
+
     // IMAGE GALLERY ROUTES //
     'POST /image/new' : 'ImageGalleryController.create',
     'GET /images': 'ImageGalleryController.findAll',

@@ -5,19 +5,24 @@
  * @help        :: See https://sailsjs.com/docs/concepts/actions
  */
 
-// const ImageGallery = require("../models/ImageGallery");
 
 module.exports = {
     create: async function(req, res) {
         try {
-            const newImage = {
-                "link": req.body.link,
-                "film": req.body.film
-            }
+            let { link, filmId } = req.allParams();
+            if (!link) return res.badRequest({ err: "Link is required" })
+            const image = await ImageGallery.create({
+                link,
+                film: filmId
+            }).fetch();
+            // const newImage = {
+            //     "link": req.body.link,
+            //     "film": req.body.film
+            // }
             // ImageGallery.create(newImage)
             // console.log(req.body)
-            const result = await ImageGallery.create(newImage)
-            return res.ok(result);
+            // const result = await ImageGallery.create(newImage)
+            return res.ok(image);
         } catch (err) {
             sails.log.info(err)
             res.serverError(err);
@@ -26,7 +31,8 @@ module.exports = {
 
     findAll: async function(req, res) {
         try {
-            const images = await ImageGallery.find()
+            const images = await ImageGallery.find({})
+                .populate('film')
             res.send(images);
         } catch (err) {
             sails.log.info(err)
@@ -36,8 +42,8 @@ module.exports = {
 
     findOne: async function(req, res) {
         try {
-            const imageId = await ImageGallery.findOne({ id: req.params.id });
-            res.send(imageId);
+            const imageId = await ImageGallery.findOne({ id: req.params.imageid });
+            res.ok(imageId);
         } catch (err) {
             res.serverError(err.toString())
         }
