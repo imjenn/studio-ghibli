@@ -64,10 +64,10 @@ module.exports = {
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
 
-    // characters: {
-    //   collection: 'character',
-    //   via: 'film'
-    // },
+    characters: {
+      collection: 'character',
+      via: 'film'
+    },
     images: {
       collection: 'imagegallery',
       via: 'film'
