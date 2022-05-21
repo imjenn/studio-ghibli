@@ -55,3 +55,10 @@
     background-color: #000;
     color: #fff;
 }
+
+.display-pass-icon {
+    position: absolute;
+    place-content: center;
+    margin-left: -25px;
+    margin-top: 12px;
+}

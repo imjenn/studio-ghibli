@@ -1,4 +1,4 @@
-import './Terms.css';
+import './styles';
 
 const Terms = () => {
     return (

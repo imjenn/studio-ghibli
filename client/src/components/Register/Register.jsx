@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import eye from '../../assets/eye-svgrepo-com.svg';
-import './Register.css';
+import './styles';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEye } from '@fortawesome/free-regular-svg-icons';
 
 const Register = () => {
     const navigate = useNavigate();
@@ -23,7 +25,6 @@ const Register = () => {
 
     const registerHandler = (e) => {
         e.preventDefault();
-        console.log(newUser);
         if (password != confirmPassword) {
             setError("Passwords do not match.")
         }
@@ -36,7 +37,7 @@ const Register = () => {
                     console.log(res);
                     navigate('/gallery')
                 })
-                .catch(err => { 
+                .catch(err => {
                     setError("Please fix the values below.")
                 });
         }
@@ -54,58 +55,58 @@ const Register = () => {
     return (
         <form className="registration-form-container" onSubmit={registerHandler}>
             <h1>Create an Account</h1>
-            { error ? <p style={{color: 'crimson'}}>{error}</p> : null }
+            { error ? <p style={{ color: 'crimson' }}>{error}</p> : null}
             <div>
-                <input 
-                    type="text" 
+                <input
+                    type="text"
                     name="firstName"
-                    placeholder="First Name" 
+                    placeholder="First Name"
                     onChange={(e) => setFirstName(e.target.value)}
                 />
             </div>
             <div>
-                <input 
-                    type="text" 
+                <input
+                    type="text"
                     id="lastName"
-                    placeholder="Last Name" 
+                    placeholder="Last Name"
                     onChange={(e) => setLastName(e.target.value)}
                 />
             </div>
             <div>
-                <input 
-                    type="text" 
-                    placeholder="Email" 
+                <input
+                    type="text"
+                    placeholder="Email"
                     onChange={(e) => setEmail(e.target.value)}
                 />
             </div>
             <div>
-                <input 
-                    type="password" 
-                    placeholder="Password" 
+                <input
+                    type="password"
+                    placeholder="Password"
                     id="password"
                     onChange={(e) => setPassword(e.target.value)}
                 />
-                <img 
-                    src={eye} 
-                    alt="Display password icon" 
-                    onClick={(e) => showPassword("password")} 
+                <FontAwesomeIcon
+                    className="display-pass-icon"
+                    icon={faEye}
+                    onClick={(e) => showPassword("password")}
                 />
             </div>
             <div>
-                <input 
-                    type="password" 
-                    placeholder="Confirm Password" 
+                <input
+                    type="password"
+                    placeholder="Confirm Password"
                     id="confirm-password"
                     onChange={(e) => setConfirmPassword(e.target.value)}
                 />
-                <img 
-                    src={eye} 
-                    alt="Display password icon" 
-                    onClick={(e) => showPassword("confirm-password")} 
+                <FontAwesomeIcon
+                    className="display-pass-icon"
+                    icon={faEye}
+                    onClick={(e) => showPassword("confirm-password")}
                 />
             </div>
             <div className="login-link">
-                <p>Already registered?</p> 
+                <p>Already registered?</p>
                 <a href="/login">Log in</a>
             </div>
             <button className="register-button">Sign Up</button>

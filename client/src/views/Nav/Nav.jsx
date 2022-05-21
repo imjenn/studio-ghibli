@@ -1,8 +1,7 @@
+import './styles';
 import { useContext, useState } from 'react';
-import Cart from '../Cart/Cart';
-import './Nav.css';
-import cart from '../../assets/cart.jpeg';
-import menu from '../../assets/menu-svgrepo-com.svg'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCartShopping, faBars } from '@fortawesome/free-solid-svg-icons';
 import CartContext from '../../context/cart-context';
 
 const Nav = (props) => {
@@ -58,15 +57,12 @@ const Nav = (props) => {
                     <a href="/register">Login/Register</a>
                     <p onClick={props.onDisplayCart}>
                         <p>Cart</p>
-                        <img src={cart} alt="shopping cart icon" />
+                        <FontAwesomeIcon className="cart-icon" icon={faCartShopping} />
                         <div className="cart-items-icon">{numOfCartItems}</div>
                     </p>
                 </div>
                 <div className="menu" onClick={dropMenuHandler}>
-                    <img
-                        src={menu}
-                        alt="hamburger menu icon"
-                    />
+                    <FontAwesomeIcon className="menu-icon" icon={faBars} />
                     <div>{numOfCartItems}</div>
                 </div>
             </div>

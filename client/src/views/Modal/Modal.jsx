@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom';
-import styles from './Modal.css';
+import './styles';
 
 const Backdrop = (props) => {
     return <div className="backdrop" onClick={props.onClose} />

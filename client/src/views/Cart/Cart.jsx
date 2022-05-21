@@ -1,8 +1,8 @@
+import './styles';
+import { Link } from 'react-router-dom';
 import { useContext } from "react";
 import CartContext from '../../context/cart-context';
 import ModalOverlay from '../Modal/Modal'
-import { Link } from 'react-router-dom';
-import './Cart.css';
 
 const Cart = (props) => {
     const cartCtx = useContext(CartContext);

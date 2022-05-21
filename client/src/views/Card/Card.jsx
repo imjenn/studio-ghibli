@@ -1,4 +1,4 @@
-import './Card.css';
+import './styles';
 
 const Card = (props) => {
     return (

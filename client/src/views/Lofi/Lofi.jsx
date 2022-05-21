@@ -1,7 +1,7 @@
+import './styles';
 import { useCallback, useEffect, useState } from 'react';
 import imageList from './imageList';
-import downArrow from '../../assets/down-arrow-svgrepo-com.svg';
-import './Lofi.css';
+// import downArrow from '../../assets/down-arrow-svgrepo-com.svg';
 
 const Lofi = () => {
     const [imageIndex, setImageIndex] = useState(0);

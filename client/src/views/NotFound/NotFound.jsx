@@ -1,5 +1,8 @@
-import './NotFound.css';
-// import Card from '../Card/Card';
+/**
+ * This component displays a 404 page if an invalid route was entered.
+ */
+
+import './styles';
 
 const NotFound = () => {
     return (
