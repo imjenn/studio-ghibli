@@ -3,10 +3,20 @@ import { useContext, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping, faBars } from '@fortawesome/free-solid-svg-icons';
 import CartContext from '../../context/cart-context';
+import CartDropdown from '../CartDropdown/CartDropdown';
 
 const Nav = (props) => {
     const cartCtx = useContext(CartContext);
     const [openMenu, setOpenMenu] = useState(false);
+    const [isHovering, setIsHovering] = useState(false);
+
+    const handleMouseOver = () => {
+        setIsHovering(true);
+    }
+
+    const handleMouseOut = () => {
+        setIsHovering(false);
+    }
 
     const dropMenuHandler = () => {
         if (!openMenu) {
@@ -25,12 +35,12 @@ const Nav = (props) => {
 
     const numOfCartItems = (
         cartCtx.items
-        ? cartCtx.items.reduce((currentNumber, item) => {
-            console.log(currentNumber)
-            console.log(item)
-            return currentNumber + item.amount;
-        }, 0)
-        : 0
+            ? cartCtx.items.reduce((currentNumber, item) => {
+                // console.log(currentNumber)
+                // console.log(item)
+                return currentNumber + item.amount;
+            }, 0)
+            : 0
     );
 
     return (
@@ -55,9 +65,17 @@ const Nav = (props) => {
                 </ul>
                 <div className="nav-cart">
                     <a href="/register">Login/Register</a>
-                    <p onClick={props.onDisplayCart}>
+                    <p
+                        onClick={props.onDisplayCart}
+                        onMouseOver={handleMouseOver}
+                        onMouseOut={handleMouseOut}
+                    >
                         <p>Cart</p>
-                        <FontAwesomeIcon className="cart-icon" icon={faCartShopping} />
+                        <FontAwesomeIcon
+                            className="cart-icon"
+                            icon={faCartShopping}
+                        />
+                        {isHovering && <CartDropdown />}
                         <div className="cart-items-icon">{numOfCartItems}</div>
                     </p>
                 </div>
