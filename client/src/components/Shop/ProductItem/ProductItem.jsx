@@ -1,8 +1,8 @@
+import './styles';
 import { useContext } from "react";
 import CartContext from "../../../context/cart-context";
 import Card from '../../../views/Card/Card';
 import Form from '../Form/ProductForm';
-import './ProductItem.css';
 
 const ProductItem = (props) => {
     const cartCtx = useContext(CartContext);

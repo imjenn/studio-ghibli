@@ -1,4 +1,4 @@
-import './Checkout.css';
+import './styles';
 import Card from '../../../views/Card/Card'
 import { useContext } from 'react';
 import CartContext from '../../../context/cart-context';

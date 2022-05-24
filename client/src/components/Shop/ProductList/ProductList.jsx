@@ -1,4 +1,4 @@
-import './ProductList.css'
+import './styles';
 import ProductItem from "../ProductItem/ProductItem"
 import SHOP_ITEMS from '../products.json'
 
