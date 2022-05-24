@@ -2,14 +2,18 @@
 
 _Note: This is still a work in progress._
 
-This is a demo application of a Studio Ghibli website using React, Sails, MySQL, and <a href="https://ghibliapi.herokuapp.com">Studio Ghibli API</a>. 
+This is a demo application of a Studio Ghibli website using React, Sails (backend), MySQL, and <a href="https://ghibliapi.herokuapp.com">Studio Ghibli API</a>. 
 
 Features:
 - [x] Display collection of films and characters
 - [x] Lo-fi component with embedded Spotify playlist + changing GIFs
-- [x] Login/Registration for Ghibli store
 - [x] Biography of Hayao Miyazaki
+- [x] Login/Registration for Ghibli store
+- [x] Gallery of downloadable images
+- [ ] User profile page
 - [ ] eCommerce platform for a Ghibli store
+
+Currently working on creating my own Studio Ghibli API.
 
 Full description of features coming soon :)
 
