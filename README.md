@@ -21,6 +21,9 @@ Full description of features coming soon :)
 
 ![ezgif com-gif-maker (15)](https://user-images.githubusercontent.com/90587567/162606336-961323e1-e510-43ef-a495-7aca4209b3cf.gif)
 
+<img src="https://user-images.githubusercontent.com/90587567/172089671-e6b91c38-29e2-4770-9d4a-5899bb25992c.gif" width="800" />
+
 ![ezgif com-gif-maker (17)](https://user-images.githubusercontent.com/90587567/163764475-4d3334ac-358d-4cb1-96a8-2cb264b8dcb7.gif)
 
+<!-- ![ezgif com-gif-maker (17)](https://user-images.githubusercontent.com/90587567/172089671-e6b91c38-29e2-4770-9d4a-5899bb25992c.gif) -->
 
