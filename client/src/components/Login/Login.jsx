@@ -1,6 +1,6 @@
+import './styles';
 import { useState } from 'react';
 import axios from 'axios';
-import './styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye } from '@fortawesome/free-regular-svg-icons';
 
@@ -21,6 +21,7 @@ const Login = () => {
 
     const submitHandler = (e) => {
         e.preventDefault();
+        // axios.post("http://localhost:1337/login")
     }
 
     const loginChangeHandler = (e) => {
@@ -31,7 +32,7 @@ const Login = () => {
     }
 
     return (
-        <form onSubmit={submitHandler}>
+        <form className="login-form" onSubmit={submitHandler}>
             <h1>Login</h1>
             <div>
                 <input
@@ -49,13 +50,11 @@ const Login = () => {
                     placeholder="password"
                     onChange={loginChangeHandler}
                 />
-                {/* <FontAwesomeIcon icon={faEye} /> */}
-                <FontAwesomeIcon icon={faEye} />
-                {/* <img 
-                    src={eye} 
-                    alt="Display password icon" 
-                    onClick={showPassword} 
-                /> */}
+                <FontAwesomeIcon 
+                    className="display-pass-icon" 
+                    icon={faEye} 
+                    onClick={(e) => showPassword("password")}
+                />
             </div>
             <div className="login-link">
                 <p>No account yet?</p>

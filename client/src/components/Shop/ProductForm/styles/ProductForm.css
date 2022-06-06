@@ -1,0 +1,16 @@
+.product-form-container button {
+    height: 40px;
+    width: 110px;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid lightgrey;
+    font-size: 11pt;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+
+.product-form-container button:hover {
+    background-color: black;
+    color: white;
+}
+

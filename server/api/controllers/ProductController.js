@@ -15,10 +15,10 @@ module.exports = {
                 "description": req.body.description,
                 "label": req.body.label,
                 "category": req.body.category,
-                "image": req.body.image
+                "imageOne": req.body.imageOne,
+                "imageTwo": req.body.imageTwo,
             }
-
-            const results = await Product.create(newProduct).exec(function(err) {
+            const results = await Product.create(newProduct).exec(function() {
                 return res.send(results);
             })
         } catch (err) {

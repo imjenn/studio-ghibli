@@ -1,5 +1,5 @@
-import { useState, useRef } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
+import './styles/ProductForm.css'
 
 const notify = () => toast.success('Added to cart', {
     duration: 3000,
@@ -7,16 +7,13 @@ const notify = () => toast.success('Added to cart', {
 })
 
 const ProductForm = (props) => {
-    // const amountInputRef = useRef();
-
     const submitHandler = (e) => {
         e.preventDefault();
-        // const enteredAmountNum = 1;
         props.onAddToCart(1)
     }
 
     return (
-        <form style={{width: "100px"}} onSubmit={submitHandler}>
+        <form className="product-form-container" style={{width: "100px"}} onSubmit={submitHandler}>
             <button onClick={notify}>Add to Cart</button>
             <Toaster />
         </form>

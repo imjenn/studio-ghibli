@@ -10,25 +10,33 @@
 
 module.exports.routes = {
 
-    // USER ROUTES //
+    /**********************************************************
+    *                    User Routes                          *
+    **********************************************************/
     'POST /login': 'UserController.login',
     'POST /register': 'UserController.register',
 
-    // PRODUCT ROUTES //
+    /**********************************************************
+    *                    Product Routes                       *
+    **********************************************************/
     'POST /newproduct' : 'ProductController.create',
     'GET /products': 'ProductController.findAll',
     'GET /product/:productId': 'ProductController.findOne',
     'PATCH /product/update/:productId': 'ProductController.update',
     'DELETE /product/delete/:productId': 'ProductController.delete',
 
-    // FILM ROUTES //
+    /**********************************************************
+    *                    Film Routes                          *
+    **********************************************************/
     'POST /film/new' : 'Film.create',
     'GET /films': 'Film.findAll',
     'GET /film/:filmid': 'Film.findOne',
     'PATCH /film/update/:filmid': 'Film.update',
     'DELETE /film/delete/:filmid': 'Film.delete',
 
-    // IMAGE GALLERY ROUTES //
+    /**********************************************************
+    *                Image Gallery Routes                     *
+    **********************************************************/
     'POST /image/new' : 'ImageGalleryController.create',
     'GET /images': 'ImageGalleryController.findAll',
     'GET /image/:imageid': 'ImageGalleryController.findOne',

@@ -1,8 +1,15 @@
 .product-item-container {
-    /* width: 50%; */
+    margin: 30px;
+    width: 400px;
 }
 
 .product-item-container img {
-    height: 300px;
-    margin: 30px;
+    height: 310px;
+    width: 420px;
+}
+
+.add-to-cart-btn {
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
 }

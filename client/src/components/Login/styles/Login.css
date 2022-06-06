@@ -1,7 +1,65 @@
-form img {
+.login-form {
+    border: none;
+    border-radius: 25px;
+    /* width: 30%; */
+    width: clamp(45rem, 450px, 50rem);
+    margin: 7rem auto;
+    padding: 30px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.login-form h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.login-form div {
+    margin: 20px auto;
+    width: 80%;
+}
+
+.login-form input {
+    height: 30px;
+    width: 33rem;
+    font-size: 14pt;
+    border: 1px solid lightgrey;
+    border-radius: 7px;
+    padding: 5px 10px;
+}
+
+.login-link {
+    display: flex;
+    place-items: center;
+    text-align: center;
+    margin-left: 60%;
+}
+
+.login-link p {
+    margin-right: 7px;
+}
+
+.register-button {
+    border: none;
+    border: 1px solid grey;
+    border-radius: 30px;
+    background-color: #fff;
+    color: #000;
+    font-size: 15pt;
+    padding: 7px 15px;
+    margin-left: 73%;
+    cursor: pointer;
+    transition: 0.25s ease-in-out;
+}
+
+.register-button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.display-pass-icon {
     position: absolute;
-    width: 30px;
-    margin-left: -40px;
-    margin-top: 5px;
+    place-content: center;
+    margin-left: -25px;
+    margin-top: 12px;
     cursor: pointer;
 }

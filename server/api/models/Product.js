@@ -34,7 +34,11 @@ module.exports = {
       type: 'string'
     },
 
-    images: {
+    imageOne: {
+      type: 'string'
+    },
+
+    imageTwo: {
       type: 'string'
     }
 
